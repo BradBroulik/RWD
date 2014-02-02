@@ -1,4 +1,0 @@
-RWD
-===
-
-Responsive Web Development
