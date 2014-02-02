@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Flexbox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+	html {
+		font: normal 100% Helvetica, sans-serif; /* context ~16px */
+	}
+	h1 {
+	     font-size: 1.125rem; /* 18px / 16px */
+	     font-weight: normal;
+	}
+
+	.container {
+	  display: -webkit-box;      /* OLD - Safari 3.1-6, iOS 3.2-6, Android 2.1+ */
+	  display: -webkit-flex;     /* NEW - Safari 6+, iOS 7+ */
+	  display: flex;             /* NEW, Spec - Opera 12.1+, Firefox 22+, Chrome 21+, IE */
+
+	  height: 400px;
+	}
+
+	aside, header, footer, section {
+		border-radius: 7pt;
+		text-align: center;
+  		padding: 7px;
+  		margin: 5px;
+	}
+
+	aside {
+		background: #ccccff;
+		-webkit-box-flex: 1;
+		-webkit-flex: 1;
+	  	flex: 1;
+	}
+
+	header, footer {
+		background: #ffeebb;
+	}
+
+	section {
+		background: #dddd88;
+	}
+
+	.main {
+	  	/* 2X larger */
+	  	-webkit-box-flex: 2;
+	  	-webkit-flex: 2;
+	  	flex: 2;
+	}
+
+	.sidebar {
+		-webkit-box-flex: 1;
+	  	-webkit-flex: 1;
+	   	flex: 1;
+
+		-webkit-box-orient: vertical;
+	  	-webkit-flex-direction: column;
+	  	flex-direction: column;
+	}
+
+	.location-aware {
+		background: crimson;
+	}
+
+	@media (max-width: 600px) {
+
+        .container {
+        	-webkit-box-orient: vertical;
+	  		-webkit-flex-direction: column;
+	  		flex-direction: column;
+
+	  		height: auto;
+		}
+
+		.main {
+			-webkit-box-flex: 1;
+		  	-webkit-flex: 1;
+		  	flex: 1;
+		}
+
+		/* location-aware content is ordered first */
+		.location-aware {
+			box-ordinal-group: 1;
+			-webkit-order: 1;
+			order: 1;
+		}
+
+		.headline, .video {
+			-webkit-box-ordinal-group: 2;	
+			-webkit-order: 2;
+			order: 2;
+		}
+    }
+ 
+	</style>
+</head>
+<body>
+  <header>
+    <h1>Navigation</h1>
+  </header>
+  <header>
+    <h1>Logo</h1>
+  </header>
+	<div class="container">
+	  <section class="main"> 
+	  	<h1>Article</h1>
+	  </section>
+	  
+	  <div class="container sidebar">
+		  <aside class="headline">
+		    <h1>Headline</h1>
+		  </aside> 
+		  <aside class="video">
+		    <h1>Video</h1>
+		  </aside> 
+		  <aside class="location-aware">
+		    <h1>Location-Aware Section</h1>
+		  </aside>
+	  </div>
+	</div>
+	<footer>
+		<h1>Footer</h1>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Basic Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+	html {
+		font: normal 100% Helvetica, sans-serif; /* context ~16px */
+	}
+
+	body {
+		margin: 0;
+	}
+
+	h1 {
+	    font-size: 1.125rem; /* 18px / 16px */
+	    font-weight: normal;
+	}
+
+	header h1 {
+		color: #fff;
+	}
+
+	.container {
+	  	display: -webkit-box;      /* OLD - Safari 3.1-6, iOS 3.2-6, Android 2.1+ */
+	  	display: -webkit-flex;     /* NEW - Safari 6+, iOS 7+ */
+	  	display: flex;             /* NEW, Spec - Opera 12.1+, Firefox 22+, Chrome 21+, IE */
+
+	  	-webkit-justify-content: center;
+	  	justify-content: center;
+
+	  	margin: 5px;
+	}
+
+	.wrap {
+		/* wrap will automatically wrap sections when the row runs out of space */
+		-webkit-box-lines: multiple; /* CAUTION: Not supported in iOS 6- */
+	  	-webkit-flex-wrap: wrap;
+	  	flex-wrap: wrap; /* CAUTION: Not supported in Firefox 27- */
+	}
+
+	header {
+		background: #111;
+		text-align: center;
+  		padding: 4 px;
+	}
+
+	section {
+		background: #dddd88;
+		border-radius: 7pt;
+		height: 240px;
+		text-align: center;
+  		padding: 7px;
+  		margin: 5px;
+
+		/* grow | shrink | basis */
+		-webkit-box-flex: 0 1 300px;
+	  	-webkit-flex: 0 1 300px;
+	  	flex: 0 1 300px;		
+	}
+	</style>
+</head>
+<body>
+  <header>
+    <h1>Basic Gallery</h1>
+  </header>
+	<div class="container wrap">
+	  <section> 
+	  	<h1>1</h1>
+	  </section>
+	  <section> 
+	  	<h1>2</h1>
+	  </section>
+	  <section>
+	  	<h1>3</h1>
+	  </section>
+	  <section> 
+	  	<h1>4</h1>
+	  </section>
+	  <section>
+	  	<h1>5</h1>
+	  </section>
+	  <section> 
+	  	<h1>6</h1>
+	  </section>
+	</div>
+</body>
+</html>

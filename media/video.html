@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Intrinsic Ratios</title>
+    <meta name="viewport" content="initial-scale=1 width=device-width" />
+    <style>
+    /* The box that contains the video should have the proper aspect ratio (4:3, 16:9, etc) */
+    .vid-wrapper {
+        width: 100%;
+        position: relative;
+        padding-bottom: 56.25%; /* 9:16 aspect ratio (16/9) */
+        height: 0;
+    }
+
+    /* The video needs to fit the dimensions of the box */
+    .vid-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    </style>
+<head>
+<body>
+<div class="vid-wrapper">
+    <iframe src="//www.youtube.com/embed/0kZzMao7Vhg?feature=player_detailpage" frameborder="0"></iframe>
+</div>
+</body>
+</html>

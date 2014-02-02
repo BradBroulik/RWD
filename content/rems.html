@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>rems</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+	 
+	html {
+	    font: normal 100% Helvetica, sans-serif; /* ~16px */
+	}
+	h1 {
+	     font-size: 1.5rem; /* 24px / 16px */
+	     font-weight: normal;
+	}
+	article header h1 {
+		font-size: 1rem; /* 16px / 16px */
+    	font-weight: bold;
+	}
+	p {
+		font-size: 1.125rem; /* 18px / 16px */
+		display: block;
+		font-family: Helvetica;
+	}
+  	span {
+    	font-size: 1rem; /* You may expect18px as cascaded (inherited) by its parent tag <p>.  (without rems, this would be relative to the parent element (<p>), with rems it sizes relative to the html element) */
+  	}
+	</style>
+</head>
+<body>
+  <header>
+    <h1>Responsive Font Strategies</h1>
+  </header>
+
+  <section>
+     <article>
+    	<header>
+          <h1>rem's</h1>
+      </header>
+      <ul>
+      <li><p>Rems behave similar to ems with one important difference: rems size relative to the size of the <em>html</em> element and not the size of the <em>body</em> element.</p></li>
+      <li><p><span>With rems, we can avoid cascading issues that occur with nested elements.  As expected, the size of this <em>span</em> element is 1rem (16px).</span></p></li>
+      <li><p><a href="http://caniuse.com/#search=rem">Browser support for rems</a> is good except for some legacy browsers and Opera mobile.  For fallback support you can provide a pixel fallback: <em>span { font-size: 16px; font-size: 1em; }</em></p></li>
+    </ul>
+    </article>    
+  </section>
+
+</body>
+
+</html>

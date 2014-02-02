@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Column Drop</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+	<style>
+		.ui-bar { margin: 0 10px 10px 0; height: 200px; text-align: center; border: 0; }
+		.ui-bar-c {
+			background: khaki;
+		}
+		.ui-bar-d {
+			background: lightblue;
+		}
+		.ui-bar-e {
+			background: plum;
+		}		
+
+		/* Drop column C when below 50em (800px) */
+		@media all and (max-width: 50em) {
+			.ui-grid-b .ui-block-c {
+				width: 100%;
+				float:none;
+			}
+			.ui-grid-b .ui-block-a, .ui-grid-b .ui-block-b {width: 50%;}
+		}
+
+		/* Stack the grid when below 35em */
+		@media all and (max-width: 35em) {
+			.my-custom-breakpoint .ui-block-a, 
+			.my-custom-breakpoint .ui-block-b,
+			.my-custom-breakpoint .ui-block-c {
+				width: 100%;
+				float:none;
+			}
+		}
+	</style>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script> 
+</head> 
+<body> 
+
+<div data-role="page" id="home">
+	<div data-role="header">
+		<h1>Column Drop Pattern</h1>
+	</div>
+
+	<div data-role="content">
+		<div class="ui-grid-b my-custom-breakpoint"> 
+			<div class="ui-block-a">
+				<div class="ui-bar ui-bar-c">Block A</div>	
+			</div>
+			<div class="ui-block-b">
+				<div class="ui-bar ui-bar-d">Block B</div>
+			</div>
+			<div class="ui-block-c">
+				<div class="ui-bar ui-bar-e">Block C</div>
+			</div>					
+		</div>
+
+	</div>
+</div>
+</body>
+</html>
+

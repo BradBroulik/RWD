@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<meta charset="utf-8">
+		<title>Picturefill</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			img {  
+				max-width: 100%; 
+			}
+			.pic-container { 
+				text-align:center; 
+			}
+		</style>
+		<script type="text/javascript" src="../libs/picturefill.js"></script>
+	</head>
+<body> 
+	<div>
+		<h3>Responsive images with <a href="https://github.com/scottjehl/picturefill" target="_blank">Picturefill</a></h3>
+        <p>In this demo we show you how to:</p>
+        <ul>
+            <li>Use Picturefill to load a responsive image for the viewport</li>
+            <li>Load an HD (retina) image when support exists</li>
+        </ul>
+	    <div data-picture data-alt="Lincoln" class="pic-container">
+	        <div data-src="images/small.jpg"></div>
+	        <div data-src="images/medium.jpg"     data-media="(min-width: 400px)"></div>
+	        <div data-src="images/large.jpg"      data-media="(min-width: 800px)"></div>
+	        <div data-src="images/extralarge.jpg" data-media="(min-width: 1000px)"></div>
+	        <!-- Load an HD (retina) image when supported
+	        <div data-src="images/large_x2.jpg"   data-media="(min-width: 800px) and (min-device-pixel-ratio: 2.0)"></div>
+	    	-->
+	    </div>
+	</div>
+</body>
+</html>
