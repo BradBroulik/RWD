@@ -5,54 +5,61 @@
 		<title>Art Direction</title> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style>
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  -mox-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}	
-h1 {
-    font-size: 1.5em; /* 24px / 16px */
-    font-weight: bold;
-    line-height: 1.1em; /* 28px / 24px */
-    padding-bottom: .3em; /* 16px / 24px */
-    padding-top: .3em; 
-}	
+			html, body, div,
+			h1, h2, h3, h4, h5, h6, p {
+			  margin: 0;
+			  padding: 0;
+			  border: 0;
+			  font-size: 100%;
+			  font: inherit;
+			  -mox-box-sizing: border-box;
+			  -webkit-box-sizing: border-box;
+			  box-sizing: border-box;
+			}
+			.ui-bar-a {
+			    background: linear-gradient(#3C3C3C, #111) repeat scroll 0 0 #111;
+			    border: 1px solid #333;
+			    color: #FFF;
+			    font-family: Helvetica,Arial,sans-serif;
+			    font-weight: 700;
+			    text-shadow: 0 -1px 0 #000;
+			}
+			h1 {
+				font-size: 1.2em;
+				font-weight: 700;
+			}
+			header > h1 {
+				display: block;
+			    font-size: 1em;
+			    margin: 0.6em 30% 0.8em;
+			    min-height: 1.1em;
+			    outline: 0 none !important;
+			    overflow: hidden;
+			    padding: 0;
+			    text-align: center;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;    
+			}
 			img {  
 				max-width: 100%; 
 			}
+			.container {
+			    margin: auto;
+			    overflow: hidden;
+			    padding: .625em 10px 1.5em; /* ems for top and bottom because those are adjusted based on font size (p43) */
+			}
 			.pic-container { 
 				text-align:center; 
-			}
-			header { 
-			    background: #111;
-			    text-align:center;
-			    color:#fff;
 			}
 		</style>
 		<script type="text/javascript" src="../libs/picturefill.js"></script>
 	</head>
 <body>
-	<header><h1>Art direction</h1></header>
-	<div>
-		<h3>Responsive images with <a href="https://github.com/scottjehl/picturefill" target="_blank">Picturefill</a></h3>
+	<header class="ui-bar-a">
+		<h1>Art direction</h1>
+	</header>
+	<div class="container">
+		<h1>Responsive images with <a href="https://github.com/scottjehl/picturefill" target="_blank">Picturefill</a></h1>
         <p>In this demo we show you how to:</p>
         <ul>
             <li>Use Picturefill to load a responsive image for the viewport</li>
@@ -60,7 +67,7 @@ h1 {
         </ul>
 	    <div data-picture data-alt="Lincoln" class="pic-container">
 	        <div data-src="images/art-direction.jpg"></div>
-	        <div data-src="images/medium.jpg"     data-media="(min-width: 400px)"></div>
+	        <div data-src="images/medium.jpg"     data-media="(min-width: 440px)"></div>
 	        <div data-src="images/large.jpg"      data-media="(min-width: 800px)"></div>
 	        <div data-src="images/extralarge.jpg" data-media="(min-width: 1000px)"></div>
 	        <!-- Load an HD (retina) image when supported

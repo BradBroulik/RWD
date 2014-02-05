@@ -5,6 +5,17 @@
     <title>Basic Gallery</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+	html, body, div, h1, h2, h3, h4, h5, h6, p {
+	  margin: 0;
+	  padding: 0;
+	  border: 0;
+	  font-size: 100%;
+	  font: inherit;
+	  -mox-box-sizing: border-box;
+	  -webkit-box-sizing: border-box;
+	  box-sizing: border-box;
+	}
+			   
 	html {
 		font: normal 100% Helvetica, sans-serif; /* context ~16px */
 	}
@@ -14,12 +25,29 @@
 	}
 
 	h1 {
-	    font-size: 1.125rem; /* 18px / 16px */
-	    font-weight: normal;
+		font-size: 1.2em;
+		font-weight: 700;
+	}
+	header > h1 {
+		display: block;
+	    font-size: 1em;
+	    margin: 0.6em 30% 0.8em;
+	    min-height: 1.1em;
+	    outline: 0 none !important;
+	    overflow: hidden;
+	    padding: 0;
+	    text-align: center;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;    
 	}
 
-	header h1 {
-		color: #fff;
+	.ui-bar-a {
+	    background: linear-gradient(#3C3C3C, #111) repeat scroll 0 0 #111;
+	    border: 1px solid #333;
+	    color: #FFF;
+	    font-family: Helvetica,Arial,sans-serif;
+	    font-weight: 700;
+	    text-shadow: 0 -1px 0 #000;
 	}
 
 	.container {
@@ -62,7 +90,7 @@
 	</style>
 </head>
 <body>
-  <header>
+  <header class="ui-bar-a">
     <h1>Basic Gallery</h1>
   </header>
 	<div class="container wrap">
