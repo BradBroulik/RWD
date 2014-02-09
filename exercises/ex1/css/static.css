@@ -1,0 +1,55 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    -mox-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+    display: block;
+}
+body {
+    background: #fff;
+    color: #333;
+    font: normal 100% Helvetica, sans-serif;
+}
+.container {
+    margin: 10px auto;
+    overflow: hidden;
+    width: 800px;
+}
+.s1 {
+    background: khaki;
+}
+.s2 {
+    background: lightblue;
+}
+.s3 {
+    background: plum;
+}
+footer > section {
+    width: 400px;
+    float: left;
+}
+footer {
+    clear: both;
+}
+section {
+    height: 200px;
+    padding: 0.4em 0px;
+}
+h1 {
+    display: block;
+    font-size: 1em;
+    font-weight: 700;
+    min-height: 1.1em;
+    outline: 0 none !important;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}   
