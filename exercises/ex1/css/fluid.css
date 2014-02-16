@@ -18,18 +18,25 @@ body {
     font: normal 100% Helvetica, sans-serif;
 }
 .container {
-    margin: 10px;
+    margin: auto;
+    width: 95%;
+    padding: .625em 1.0548523% 1.5em; /* 10px/16px, 10px/948, 24px/16px */
 }
 footer > section {
-    width: 50%;
+    width: 49.1561181%; /* 466px / 948px */
+    margin-right: 1.6877637%; /* 16px / 948px */
     float: left;
+}
+footer > section:last-child {
+    margin-right: 0;
 }
 footer {
     clear: both;
 }
 section {
     min-height: 200px;
-    padding: 0.4em 0px;
+    margin-bottom: 1em;
+    padding: 0.4em 0;
 }
 h1 {
     display: block;

@@ -18,7 +18,9 @@ body {
     font: normal 100%/1.5em Helvetica, sans-serif; /* font-size: ~16px, line-height: ~24px; */
 }
 .container {
-    margin: 10px;
+    margin: auto;
+    width: 95%;
+    padding: .625em 1.0548523% 1.5em; /* 10px/16px, 10px/948, 24px/16px */
 }
 footer > section {
     width: 100%;
@@ -29,7 +31,8 @@ footer {
 }
 section {
     min-height: 200px;
-    padding: 0.4em 0px;
+    margin-bottom: 1em;
+    padding: 0.4em 0;
 }
 h1 {
     display: block;
@@ -47,24 +50,38 @@ img {
     max-height: 100%; 
 }
 p {
+    font-family: Special Elite;
     font-size: 1.125em; /* 18px / 16px */
     padding: 1em 1em;
 }
+
+.wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 9:16 aspect ratio */
+}
+
+/* The map needs to fit the dimensions of the box */
+.wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .pic-container { 
     text-align:center;
-}
-.s2 {
-    background: lightblue;
-}
-.s3 {
-    background: plum;
 }
 
 /* Stack the layout when below 35em (~560px) */ 
 @media (min-width: 35em) {
     footer > section {
-        width: 50%;
+        width: 49.1561181%; /* 466px / 948px */
+        margin-right: 1.6877637%; /* 16px / 948px */
         float: left;
         clear: none;
+    }
+    footer > section:last-child {
+        margin-right: 0;
     }
 }

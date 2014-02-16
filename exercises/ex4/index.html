@@ -6,6 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css" />
     <script type="text/javascript" src="../../libs/picturefill.js"></script>
+    <script type="text/javascript" src="../../libs/eCSSential.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../../libs/ajaxInclude.js"></script>
+    <script>
+    eCSSential({
+        "(min-width: 35em)":  "//fonts.googleapis.com/css?family=Special+Elite"
+    });
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log("DOMContentLoaded");
+        $( "[data-replace],[data-after]" ).ajaxInclude( {}, function() { });
+    }, false);
+    </script>
 </head>
 <body>
     <div class="container">
@@ -23,6 +36,8 @@
             </section>
         	<section class="s3">
                 <h1>Block C</h1>
+                <!-- Load non-essectial content after page load -->
+                <div data-replace="includes/maps.html"></div>
             </section>
         </footer>
     </div>

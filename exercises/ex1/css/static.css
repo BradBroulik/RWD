@@ -18,19 +18,25 @@ body {
     font: normal 100% Helvetica, sans-serif;
 }
 .container {
-    margin: 10px auto;
-    width: 800px;
+    margin: auto;
+    width: 948px;
+    padding: 10px 10px 24px;
 }
 footer > section {
-    width: 400px;
+    width: 466px;
+    margin-right: 16px;
     float: left;
+}
+footer > section:last-child {
+    margin-right: 0;
 }
 footer {
     clear: both;
 }
 section {
     min-height: 200px;
-    padding: 0.4em 0px;
+    margin-bottom: 16px;
+    padding: 0.4em 0;
 }
 h1 {
     display: block;
