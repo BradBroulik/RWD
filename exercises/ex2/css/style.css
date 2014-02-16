@@ -19,26 +19,16 @@ body {
 }
 .container {
     margin: 10px;
-    overflow: hidden;
-}
-.s1 {
-    background: khaki;
-}
-.s2 {
-    background: lightblue;
-}
-.s3 {
-    background: plum;
 }
 footer > section {
-    width: 50%;
-    float: left;
+    width: 100%;
+    clear: both;
 }
 footer {
     clear: both;
 }
 section {
-    height: 200px;
+    min-height: 200px;
     padding: 0.4em 0px;
 }
 h1 {
@@ -52,11 +42,21 @@ h1 {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+.s1 {
+    background: khaki;
+}
+.s2 {
+    background: lightblue;
+}
+.s3 {
+    background: plum;
+}
 
-/* Stack the layout when below 35em */
-@media (max-width: 35em) {
+/* Unstack the layout when above 35em (prefer mobile first media queries) */
+@media (min-width: 35em) {
     footer > section {
-        width: 100%;
-        clear: both;
+        width: 50%;
+        float: left;
+        clear: none;
     }
 }

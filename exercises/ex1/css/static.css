@@ -19,17 +19,7 @@ body {
 }
 .container {
     margin: 10px auto;
-    overflow: hidden;
     width: 800px;
-}
-.s1 {
-    background: khaki;
-}
-.s2 {
-    background: lightblue;
-}
-.s3 {
-    background: plum;
 }
 footer > section {
     width: 400px;
@@ -39,7 +29,7 @@ footer {
     clear: both;
 }
 section {
-    height: 200px;
+    min-height: 200px;
     padding: 0.4em 0px;
 }
 h1 {
@@ -53,3 +43,12 @@ h1 {
     text-overflow: ellipsis;
     white-space: nowrap;
 }   
+.s1 {
+    background: khaki;
+}
+.s2 {
+    background: lightblue;
+}
+.s3 {
+    background: plum;
+}

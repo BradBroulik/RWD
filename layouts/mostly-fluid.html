@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+    *, *:before, *:after {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+        -mox-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+        display: block;
+    }
+    body {
+        background: #fff;
+        color: #333;
+        font: normal 100% Helvetica, sans-serif;
+    }
+    header > h1 {
+        display: block;
+        font-size: 1em; /* 16px / 16px */
+        margin: 0.625em 30% 0.75em; /* 10/16, 30%, 12/16) */
+        min-height: 1.1em;
+        outline: 0 none !important;
+        overflow: hidden;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;    
+    }    
+    .container {
+        margin: 10px;
+        overflow: hidden;
+    } 
+    footer > section {
+        width: 50%;
+        float: left;
+    }
+    footer {
+        clear: both;
+    }
+    section {
+        height: 200px;
+        padding: 0.4em 0px;
+    }
+    h1 {
+        display: block;
+        font-size: 1em;
+        font-weight: 700;
+        min-height: 1.1em;
+        outline: 0 none !important;
+        overflow: hidden;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .s1 {
+        background: khaki;
+    }
+    .s2 {
+        background: lightblue;
+    }
+    .s3 {
+        background: plum;
+    }
+    .ui-bar-a {
+        background: linear-gradient(#3C3C3C, #111) repeat scroll 0 0 #111;
+        border: 1px solid #333;
+        color: #FFF;
+        font-family: Helvetica,Arial,sans-serif;
+        font-weight: 700;
+        text-shadow: 0 -1px 0 #000;
+    }
+
+    /* Stack the layout when below 35em */
+    @media (max-width: 35em) {
+        footer > section {
+            width: 100%;
+            clear: both;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header class="ui-bar-a">
+        <h1>Mostly Fluid Pattern</h1>
+    </header>    
+    <div class="container">
+        <section class="s1">
+            <h1>Block A</h1>
+        </section>
+        <footer>
+        	<section class="s2">
+                <h1>Block B</h1>
+            </section>
+        	<section class="s3">
+                <h1>Block C</h1>
+            </section>
+        </footer>
+    </div>
+</body>
+</html>

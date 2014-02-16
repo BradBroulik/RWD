@@ -7,7 +7,7 @@
 	<style type="text/css">
 
 	body {
-	    font: normal 100% Helvetica, sans-serif; /* Set base font in percentages to avoid the IE resizing issue with ems (p31) */
+	    font: normal 100%/1.5em Helvetica, sans-serif; /* font-size: ~16px, line-height: ~24px; Set base font in percentages to avoid the IE resizing issue with ems (p31) */
 	}
 	h1 {
 	     font-size: 1.5em; /* 24px / 16px */
@@ -19,8 +19,6 @@
 	}
 	p {
 		font-size: 1.125em; /* 18px / 16px */
-		display: block;
-		font-family: Helvetica;
 	}
   	span {
     	font-size: 1em; /* 16px / 16px (with ems, this is relative to the parent element (<p>), with rems it sizes relative to the html element) */
@@ -39,8 +37,8 @@
         </header>
         <ul>
           <li><p>A much more flexible way of sizing fonts is to use ems.  One <em>em</em> is equal to the current font size.  If the body text is 16px then 1em = 16px; 2em = 32px;  Ems are resizable across browsers and they also cascade - that is, the font size of the parent element effects the font size of the child element.</p></li>
-          <li><p><span>This is an example of the cascading issue when using ems.  This <em>span</em> element's font-size is set to 1 em in CSS.  And its actual size is calculated as 1em of its parent <em>p</em> tag resulting in a size of 18px.  With rems, we can avoid cascading issues that occur because rems calculate their base on the <em>html</em> element.</span></p></li>
-          <li><p><strong>TIP:</strong> When using ems it is recommended to set the base font in percentages to avoid a resizing issue that Internet Explorer has.  IE's resizing for differing em sizing isn't consistent with other browsers (see p31, Implementing Responsive Design).</p></li>
+          <li><p>&lt;p&gt;<span>&lt;span&gt;This is an example of the cascading issue when using ems.  This <em>span</em> element's font-size is set to 1 em in CSS.  And its actual size is calculated as 1em of its parent <em>p</em> tag resulting in a size of 18px.  With rems, we can avoid cascading issues that occur because rems (root ems) calculate their base on the root <em>html</em> element.&lt;/span&gt;</span>&lt;/p&gt;</p></li>
+          <li><p><strong>TIP:</strong> When using ems it is recommended to set the base font in percentages to avoid a resizing issue that Internet Explorer has.  IE's resizing for differing em sizing isn't consistent with other browsers. <!--(see p31, Implementing Responsive Design)--></p></li>
         </ul>  
     </article> 
   </section>

@@ -23,29 +23,34 @@
 			    font-weight: 700;
 			    text-shadow: 0 -1px 0 #000;
 			}
-			h1 {
-				font-size: 1.2em;
-				font-weight: 700;
-			}
 			header > h1 {
 				display: block;
-			    font-size: 1em;
-			    margin: 0.6em 30% 0.8em;
+			    font-size: 1em; /* 16px / 16px */
+			    margin: 0.625em 30% 0.75em; /* 10/16, 30%, 12/16) */
 			    min-height: 1.1em;
 			    outline: 0 none !important;
 			    overflow: hidden;
-			    padding: 0;
 			    text-align: center;
 			    text-overflow: ellipsis;
 			    white-space: nowrap;    
 			}
+			h1 {
+				font-size: 1.25em; /* 20px / 16px */
+				font-weight: 700;
+    			margin-bottom: .375em; /* 6px / 16px */
+    			margin-top: .375em; /* 6px / 16px */
+			}			
 			img {  
 				max-width: 100%; 
+			}
+			ul {
+				margin: .5em 1em; /* 8/16 16/16 */
 			}
 			.container {
 			    margin: auto;
 			    overflow: hidden;
-			    padding: .625em 10px 1.5em; /* ems for top and bottom because those are adjusted based on font size (p43) */
+			    width: 95%;
+				padding: 1%; /* 10px/948*/
 			}
 			.pic-container { 
 				text-align:center; 
