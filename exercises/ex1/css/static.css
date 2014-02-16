@@ -20,7 +20,7 @@ body {
 .container {
     margin: auto;
     width: 948px;
-    padding: 10px 10px 24px;
+    padding: 10px 0 24px;
 }
 footer > section {
     width: 466px;

@@ -15,12 +15,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
     background: #fff;
     color: #333;
-    font: normal 100% Helvetica, sans-serif;
+    font: normal 100%/1.5em Helvetica, sans-serif; /* font-size: ~16px, line-height: ~24px; */
 }
 .container {
     margin: auto;
     width: 95%;
-    padding: .625em 1.0548523% 1.5em; /* 10px/16px, 10px/948, 24px/16px */
+    padding: .625em 0 1.5em; /* 10px/16px, 0, 24px/16px */
 }
 footer > section {
     width: 49.1561181%; /* 466px / 948px */
