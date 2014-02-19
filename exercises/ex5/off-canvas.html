@@ -4,11 +4,13 @@
     <title>Responsive</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/rwd-nav3.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script type="text/javascript" src="../../libs/picturefill.js"></script>
     <script type="text/javascript" src="../../libs/eCSSential.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="../../libs/ajaxInclude.js"></script>
+    <script type="text/javascript" src="../../libs/rwd-nav3.js"></script>
     <script>
     eCSSential({
         "(min-width: 35em)":  "//fonts.googleapis.com/css?family=Special+Elite"
@@ -21,6 +23,10 @@
     </script>
 </head>
 <body>
+  <div id="main">  
+   <a href="http://www.filamentgroup.com/" id="logo"><img src="css/img/fg-logo.gif" alt="Filament Group, Inc." /></a>
+   <a href="#nav" id="show-nav" class="button">Menu</a>   
+
     <div class="container">
         <section class="s1">
             <h1>Block A</h1>
@@ -40,6 +46,25 @@
                 <div data-replace="../includes/maps.html"></div>
             </section>
         </footer>
+    </div>
+  </div>
+  
+    <div class="nav-primary" id="nav">
+       <h3>Sections:</h3>
+        <ul>
+            <li class="nav-current"><a href="http://www.filamentgroup.com/services">What We Do</a>
+                <ul>
+                <li><a href="">Analysis & planning</a></li>
+                <li><a href="">Branding</a></li>
+                <li><a href="">UI design</a></li>
+                <li><a href="">Front-end code</a></li>
+                </ul>       
+            </li>
+            <li><a href="http://www.filamentgroup.com/portfolio">What We've Done</a></li>
+            <li><a href="http://www.filamentgroup.com/lab">What We're Thinking</a></li>
+            <li><a href="http://www.filamentgroup.com/about">Who We Are</a></li>        
+            <li><a href="http://www.filamentgroup.com/contact">Contact Us</a></li>
+        </ul>
     </div>
 </body>
 </html>

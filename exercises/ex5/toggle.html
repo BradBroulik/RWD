@@ -4,11 +4,13 @@
     <title>Responsive</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/rwd-nav.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script type="text/javascript" src="../../libs/picturefill.js"></script>
     <script type="text/javascript" src="../../libs/eCSSential.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="../../libs/ajaxInclude.js"></script>
+    <script type="text/javascript" src="../../libs/rwd-nav.js"></script>
     <script>
     eCSSential({
         "(min-width: 35em)":  "//fonts.googleapis.com/css?family=Special+Elite"
@@ -16,11 +18,25 @@
     
     document.addEventListener('DOMContentLoaded', function() {
         console.log("DOMContentLoaded");
+        $('.nav-primary').trigger('testfit');  // Update nav before loading maps
         $( "[data-replace],[data-after]" ).ajaxInclude( {}, function() { });
     }, false);
     </script>
 </head>
 <body>
+    <a href="http://www.filamentgroup.com/" id="logo"><img src="css/img/fg-logo.gif" alt="Filament Group, Inc." /></a>
+    <a href="#main" class="skip">Skip navigation</a>
+    <div class="nav-primary">
+       <h3>Sections:</h3>
+        <ul>
+            <li class="nav-current"><a href="http://www.filamentgroup.com/services">What We Do</a></li>
+            <li><a href="http://www.filamentgroup.com/portfolio">What We've Done</a></li>
+            <li><a href="http://www.filamentgroup.com/lab">What We're Thinking</a></li>
+            <li><a href="http://www.filamentgroup.com/about">Who We Are</a></li>        
+            <li><a href="http://www.filamentgroup.com/contact">Contact Us</a></li>
+        </ul>
+    </div>
+
     <div class="container">
         <section class="s1">
             <h1>Block A</h1>
