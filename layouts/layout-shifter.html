@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Layout Shifter</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    *, *:before, *:after {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        list-style: none;
+        vertical-align: baseline;
+        -mox-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { 
+        display: block;
+    }
+    body {
+        background: #fff;
+        color: #333;
+        font: normal 100%/1.5em Helvetica, sans-serif; /* font-size: ~16px, line-height: ~24px; */
+    }
+    .container {
+        margin: auto;
+        width: 95%;
+        padding: .625em 0 1.5em; /* 10px/16px, 0, 24px/16px */
+    }
+    aside > section {
+        width: 100%;
+        clear: both;
+    }
+    aside {
+        clear: both;
+    }
+    section {
+        min-height: 200px;
+        margin-bottom: 1em;
+        padding: 0.4em 0;
+    }
+    h1 {
+        display: block;
+        font-size: 1em;
+        font-weight: 700;
+        min-height: 1.1em;
+        outline: 0 none !important;
+        overflow: hidden;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .s1 {
+        background: khaki;
+    }
+    .s2 {
+        background: lightblue;
+    }
+    .s3 {
+        background: plum;
+    }
+
+    /* Unstack the layout when above 35em (prefer mobile first media queries) */
+    @media (min-width: 35em) {
+        .s1 { 
+            float: left;
+            width: 32.7004219%; /* 310px / 948px */
+            margin-right: 1.6877637%; /* 16px / 948px */
+            height: 416px;
+        }
+        aside {
+            float: right;
+            width: 65.611814%; /* 622px / 948px */
+            clear: none;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="s1">
+            <h1>Block A</h1>
+        </section>
+        <aside>
+            <section class="s2">
+                <h1>Block B</h1>
+            </section>
+            <section class="s3">
+                <h1>Block C</h1>
+            </section>
+        </aside>
+    </div>
+</body>
+</html>
