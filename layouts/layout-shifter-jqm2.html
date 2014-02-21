@@ -2,11 +2,30 @@
 <html> 
 	<head> 
 	<meta charset="utf-8">
-	<title>Responsive</title> 
+	<title>Layout Shifter</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+	<link rel="stylesheet" href="//code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css" />
 	<style>
-		.ui-bar { margin: 0 10px 10px 0; }
+		.ui-bar { margin: 0 10px 10px 0; text-align: center; border: 0; }
+
+		.ui-grid-b .ui-block-a .ui-bar,
+		.ui-grid-b .ui-block-b .ui-bar,
+		.ui-grid-b .ui-block-c .ui-bar { 
+			text-align: center; border: 0;
+		}
+
+		.ui-bar-c {
+			background: khaki;
+			height: 225px;
+		}
+		.ui-bar-d {
+			background: lightblue;
+			height: 100px;
+		}
+		.ui-bar-e {
+			background: plum;
+			height: 100px;
+		}	
 
 		/* Stack the grid when below 50em (800px) */
 		@media all and (max-width: 50em) {
@@ -25,34 +44,32 @@
 			.my-custom-breakpoint .ui-block-b { width: 50%; }
 		}
 	</style>
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script> 
+	<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="//code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.js"></script> 
 </head> 
 <body> 
 
 <div data-role="page" id="home">
-	<div data-role="header">
-		<h1>Responsive Grid</h1>
+	<div data-role="header" data-theme="b">
+		<h1>Layout Shifter</h1>
 	</div>
 
 	<div data-role="content">
 		<div class="ui-grid-a ui-responsive"> 
 			<div class="ui-block-a">
-				<div class="ui-bar ui-bar-e" style="height:225px;">Block A</div>
+				<div class="ui-bar ui-bar-c""><h1>Block A</h1></div>
 			</div>
 			<div class="ui-block-b">
-				<div class="ui-grid-a my-custom-breakpoint"> 
+				<div class="ui-grid-a my-custom-breakpoint">
 					<div class="ui-block-a">
-						<div class="ui-bar ui-bar-e" style="height:100px;">Block B</div>
-
+						<div class="ui-bar ui-bar-d"><h1>Block B</h1></div>
 					</div>
 					<div class="ui-block-b">
-						<div class="ui-bar ui-bar-e" style="height:100px;">Block C</div>
+						<div class="ui-bar ui-bar-e"><h1>Block C</h1></div>
 					</div>		
 				</div>
 			</div>		
 		</div>
-
 	</div>
 </div>
 </body>

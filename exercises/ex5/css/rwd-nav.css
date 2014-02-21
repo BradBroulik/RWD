@@ -93,7 +93,7 @@ a.skip {
 .nav-menu .nav-primary.expanded li,
 .nav-menu .nav-primary li.nav-current {
    display: list-item;
-} 
+}
 .nav-menu .nav-primary li.nav-current {
    border-bottom-width: 0;
 }

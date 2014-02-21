@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Responsive</title>
-	<meta charset="utf-8">
+    <title>Mostly Fluid</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css" />
     <style>
     *, *:before, *:after {
         margin: 0;
@@ -12,6 +11,7 @@
         border: 0;
         font-size: 100%;
         font: inherit;
+        list-style: none;
         vertical-align: baseline;
         -mox-box-sizing: border-box;
         -webkit-box-sizing: border-box;
@@ -23,33 +23,24 @@
     body {
         background: #fff;
         color: #333;
-        font: normal 100% Helvetica, sans-serif;
+        font: normal 100%/1.5em Helvetica, sans-serif; /* font-size: ~16px, line-height: ~24px; */
     }
-    header > h1 {
-        display: block;
-        font-size: 1em; /* 16px / 16px */
-        margin: 0.625em 30% 0.75em; /* 10/16, 30%, 12/16) */
-        min-height: 1.1em;
-        outline: 0 none !important;
-        overflow: hidden;
-        text-align: center;
-        text-overflow: ellipsis;
-        white-space: nowrap;    
-    }    
     .container {
-        margin: 10px;
-        overflow: hidden;
-    } 
+        margin: auto;
+        width: 95%;
+        padding: .625em 0 1.5em; /* 10px/16px, 0, 24px/16px */
+    }
     footer > section {
-        width: 50%;
-        float: left;
+        width: 100%;
+        clear: both;
     }
     footer {
         clear: both;
     }
     section {
-        height: 200px;
-        padding: 0.4em 0px;
+        min-height: 200px;
+        margin-bottom: 1em;
+        padding: 0.4em 0;
     }
     h1 {
         display: block;
@@ -71,37 +62,31 @@
     .s3 {
         background: plum;
     }
-    .ui-bar-a {
-        background: linear-gradient(#3C3C3C, #111) repeat scroll 0 0 #111;
-        border: 1px solid #333;
-        color: #FFF;
-        font-family: Helvetica,Arial,sans-serif;
-        font-weight: 700;
-        text-shadow: 0 -1px 0 #000;
-    }
 
-    /* Stack the layout when below 35em */
-    @media (max-width: 35em) {
+    /* Unstack the layout when above 35em (prefer mobile first media queries) */
+    @media (min-width: 35em) {
         footer > section {
-            width: 100%;
-            clear: both;
+            width: 49.1561181%; /* 466px / 948px */
+            margin-right: 1.6877637%; /* 16px / 948px */
+            float: left;
+            clear: none;
         }
+        footer > section:last-child {
+            margin-right: 0;
+        }    
     }
     </style>
 </head>
 <body>
-    <header class="ui-bar-a">
-        <h1>Mostly Fluid Pattern</h1>
-    </header>    
     <div class="container">
         <section class="s1">
             <h1>Block A</h1>
         </section>
         <footer>
-        	<section class="s2">
+            <section class="s2">
                 <h1>Block B</h1>
             </section>
-        	<section class="s3">
+            <section class="s3">
                 <h1>Block C</h1>
             </section>
         </footer>
