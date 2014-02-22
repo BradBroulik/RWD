@@ -3,13 +3,13 @@
 
 body {
     /*font: 62.5%/1.4 helvetica, arial, sans-serif;*/
-    padding: 2em 1em;
+    padding: .8em .6em;
 }
 
 
 #logo {
    float: left;
-   margin: 0 0 1em;
+   margin: 0 0 .5em;
 }
 /*
 p {

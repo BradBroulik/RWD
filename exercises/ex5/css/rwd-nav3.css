@@ -2,11 +2,11 @@
 ------------------------------ */
 
 /* apply a natural box layout model to all elements */
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+/** { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }*/
 
 body {
     /*font: 62.5%/1.4 helvetica, arial, sans-serif;*/
-    background-color: #fcfcfc;
+    /*background-color: #fcfcfc;*/
 }
 
 #logo {
@@ -30,7 +30,8 @@ p.intro {
 #main {
    position: relative;
    z-index: 99;
-   padding: 2em 1.5em;
+   /*padding: 2em 1.5em;*/
+   padding: .8em .6em;
    background-color: #fff;   
    -webkit-transition: left 0.3s ease;
    -moz-transition: left 0.3s ease;
