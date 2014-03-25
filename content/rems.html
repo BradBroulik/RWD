@@ -17,10 +17,10 @@
     	font-weight: bold;
 	}
 	p {
-		font-size: 1.125rem; /* 18px / 16px */
+		font-size: 1.25rem; /* 20px / 16px */
 	}
   	span {
-    	font-size: 1rem; /* You may expect18px as cascaded (inherited) by its parent tag <p>.  (without rems, this would be relative to the parent element (<p>), with rems it sizes relative to the html element) */
+    	font-size: 1rem; /* You may expect 20px as cascaded (inherited) by its parent tag <p>.  (without rems, this would be relative to the parent element (<p>), with rems it sizes relative to the html element) */
   	}
 	</style>
 </head>
@@ -36,8 +36,8 @@
       </header>
       <ul>
       <li><p>Rems (root ems) behave similar to ems with one important difference: rems size relative to the root <em>html</em> element and not the size of the <em>body</em> element.</p></li>
-      <li><p>&lt;p&gt;<span>&lt;span&gt;With rems, we can avoid cascading issues that occur with nested elements.  As expected, the size of this <em>span</em> element is 1rem (16px).&lt;/span&gt;</span>&lt;/p&gt;</p></li>
-      <li><p><a href="http://caniuse.com/#search=rem">Browser support for rems</a> is good except for some legacy browsers and Opera mobile.  For fallback support you can provide a pixel fallback: <em>span { font-size: 16px; font-size: 1em; }</em></p></li>
+      <li><p>&lt;p&gt;<span>&lt;span&gt;With rems, we can avoid cascading issues that occur with nested elements.&lt;/span&gt;</span>  As expected, the size of this <em>span</em> element is 1rem (16px).&lt;/p&gt;</p></li>
+      <li><p><a href="http://caniuse.com/#search=rem">Browser support for rems</a> is good except for some legacy browsers and Opera mobile.  For fallback support you can provide a pixel fallback: <em>span { font-size: 16px; font-size: 1rem; }</em></p></li>
     </ul>
     </article>    
   </section>
