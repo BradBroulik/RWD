@@ -30,11 +30,11 @@
         width: 95%;
         padding: .625em 0 1.5em; /* 10px/16px, 0, 24px/16px */
     }
+    aside {
+        clear: both;
+    }    
     aside > section {
         width: 100%;
-        clear: both;
-    }
-    aside {
         clear: both;
     }
     section {
@@ -63,6 +63,19 @@
         background: plum;
     }
 
+    /* Mostly fluid */
+    @media (min-width: 35em) {
+        aside > section {
+            width: 49.1561181%; /* 466px / 948px */
+            margin-right: 1.6877637%; /* 16px / 948px */
+            float: left;
+            clear: none;
+        }
+        aside > section:last-child {
+            margin-right: 0;
+        }    
+    }
+
     /* Layout shifter */
     @media (min-width: 50em) {
         .s1 {
@@ -79,18 +92,6 @@
         aside > section {
             width: 100%!important;
         }
-    }
-    /* Mostly fluid */
-    @media (min-width: 35em) {
-        aside > section {
-            width: 49.1561181%; /* 466px / 948px */
-            margin-right: 1.6877637%; /* 16px / 948px */
-            float: left;
-            clear: none;
-        }
-        aside > section:last-child {
-            margin-right: 0;
-        }    
     }
     </style>
 </head>
