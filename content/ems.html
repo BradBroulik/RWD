@@ -22,8 +22,9 @@
 	}
   	span {
     	font-size: 1em; /* 16px / 16px (with ems, this is relative to the parent element (<p>), with rems it sizes relative to the html element) */
-  	}
+  }
 	</style>
+  <script src="//google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 </head>
 <body>
   <header>
@@ -36,10 +37,28 @@
           <h1>em's</h1>
         </header>
         <ul>
-          <li><p>A much more flexible way of sizing fonts is to use ems.  One <em>em</em> is equal to the current font size.  If the body text is 16px then 1em = 16px; 2em = 32px;  Ems are resizable across browsers and they also cascade - that is, the font size of the parent element effects the font size of the child element.</p></li>
-          <li><p>&lt;p&gt;<span>&lt;span&gt;This is an example of the cascading issue when using ems.&lt;/span&gt;</span>  This <em>span</em> element's font-size is set to 1 em in CSS.  And its actual size is calculated as 1em of its parent <em>p</em> tag resulting in a size of 20px.  With rems, we can avoid cascading issues that occur because rems (root ems) calculate their base on the root <em>html</em> element.&lt;/p&gt;</p></li>
-          <li><p><strong>TIP:</strong> When using ems it is recommended to set the base font in percentages to avoid a resizing issue that Internet Explorer has.  IE's resizing for differing em sizing isn't consistent with other browsers. <!--(see p31, Implementing Responsive Design)--></p></li>
+          <li><p>A much more flexible way of sizing fonts is to use ems.  One <em>em</em> is equal to the current font size.  If the body text is 16px then 1em = 16px; 2em = 32px;</p></li>
+          <li><p>Ems are resizable across browsers (zoom friendly).</p></li>
+          <li><p>Ems cascade - that is, the font size of the parent element effects the font size of the child element.</p></li>
+          <li><p><strong>Quiz:</strong> Given the following CSS, what is the font-size of the <em style="color:FireBrick;">span</em> element below?</p></li>
         </ul>  
+
+    <pre class="prettyprint">
+      body {
+        font: normal 100%/1.5em Helvetica, sans-serif; /* font-size: ~16px, line-height: ~24px; */
+      }
+      p {
+        font-size: 1.25em; /* 20px / 16px */
+      }
+      span {
+        font-size: 1em; /* 16px / 16px */
+      }
+    </pre>
+
+          <p><strong>&lt;p&gt;</strong></pre><span style="color:FireBrick;">&lt;span&gt;This is an example of the cascading issue when using ems.&lt;/span&gt;</span>  This <em>span</em> element's font-size is set to 1 em in CSS.  And its actual size is calculated as 1em of its parent <em>p</em> tag resulting in a size of 20px.  With rems, we can avoid cascading issues that occur because rems (root ems) calculate their base on the root <em>html</em> element.<strong>&lt;/p&gt;</strong></p>
+
+          <p><strong>TIP:</strong> When using ems it is recommended to set the base font in percentages to avoid a resizing issue that Internet Explorer has.  IE's resizing for differing em sizing isn't consistent with other browsers. <!--(see p31, Implementing Responsive Design)--></p>
+        
     </article> 
   </section>
 

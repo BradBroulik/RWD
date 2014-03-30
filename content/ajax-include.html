@@ -7,9 +7,9 @@
 		<link rel="stylesheet" href="//code.jquery.com/mobile/1.4.1/jquery.mobile-1.4.1.min.css" />
 		<script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript">
-		$( document ).on("pageinit", "#ajax-include-page", function(){
+		$( document ).on("pagecreate", "#ajax-include-page", function(){
    			$( "[data-replace],[data-after]" ).ajaxInclude( {}, function() { 
-				$.mobile.pageContainer.trigger( "create" );
+				$.mobile.pageContainer.enhanceWithin();
 			});
 		});
 		</script>
