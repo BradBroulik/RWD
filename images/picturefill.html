@@ -12,7 +12,7 @@
 				text-align:center; 
 			}
 		</style>
-		<script type="text/javascript" src="../libs/picturefill.js"></script>
+		<script async type="text/javascript" src="../libs/picturefill.js"></script>
 	</head>
 <body>
 	<div>
@@ -23,15 +23,13 @@
             <li>Load an HD (retina) image when support exists</li>
         </ul>
         <div class="pic-container">
-		    <span data-picture data-alt="Lincoln">
-		        <span data-src="images/small.jpg"></span>
-		        <span data-src="images/medium.jpg"     data-media="(min-width: 400px)"></span>
-		        <span data-src="images/large.jpg"      data-media="(min-width: 800px)"></span>
-		        <span data-src="images/extralarge.jpg" data-media="(min-width: 1000px)"></span>
-		        <!-- Load an HD (retina) image when supported
-		        <span data-src="images/large_x2.jpg"   data-media="(min-width: 800px) and (min-device-pixel-ratio: 2.0)"></span>
-		    	-->
-		    </span>
+		    <picture>
+		    	<source srcset="images/extralarge.jpg" media="(min-width: 1000px)">
+		    	<source srcset="images/large.jpg, images/large@2x.jpg 2x" media="(min-width: 800px)">
+		        <source srcset="images/medium.jpg" media="(min-width: 400px)">
+		        <source srcset="images/small.jpg">
+		        <img srcset="images/small.jpg, images/large@2x.jpg 2x" alt="Lincoln">  
+		    </picture>
 		</div>
 	</div>
 </body>

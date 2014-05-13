@@ -12,10 +12,11 @@
         <section class="s1">
             <h1>Block A</h1>
             <div class="pic-container">
-                <span data-picture data-alt="Lincoln">
-                    <span data-src="../images/small.png"></span>
-                    <span data-src="../images/large.png" data-media="(min-width: 35em)"></span>
-                </span>
+                <picture>
+                    <source srcset="../images/large.png" media="(min-width: 35em)">
+                    <source srcset="../images/small.png">
+                    <img srcset="../images/small.png" alt="Lincoln"> 
+                </picture>
             </div>
         </section>
         <footer>
