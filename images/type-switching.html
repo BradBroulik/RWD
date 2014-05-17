@@ -2,7 +2,7 @@
 <html> 
 	<head> 
 		<meta charset="utf-8">
-		<title>Fluid image</title> 
+		<title>Type-switching</title> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style>
 			img {  
@@ -16,16 +16,15 @@
 	</head>
 <body>
 	<div>
-        <h3>Use case: fluid image</h3>
+        <h3>Use case: type-switching</h3>
         <ul>
-            <li>Load an appropriate fluid image based on the devices supported screen density and viewport dimensions</li>
+            <li>Load an appropriate image (SVG, PNG, WebP, etc) based on browser support.</li>
         </ul>
         <div class="pic-container">
-		    <img 
-			     srcset="images/large.jpg 1024w, images/medium.jpg 640w, images/small.jpg 320w"
-			     sizes="100vw"
-			     src="images/small.jpg"
-			     alt="circles" />
+		    <picture>
+				<source type="image/svg+xml" srcset="images/notes.svg">
+		   		<img src="images/notes.png" alt="notes" height="250" width="250"/>
+			</picture>
 		</div>
 	</div>
 </body>

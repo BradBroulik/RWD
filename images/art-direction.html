@@ -2,82 +2,91 @@
 <html> 
 	<head> 
 		<meta charset="utf-8">
-		<title>Art Direction</title> 
+		<title>Art direction</title> 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<style>
-			* {
-			  margin: 0;
-			  padding: 0;
-			  border: 0;
-			  font-size: 100%;
-			  font: inherit;
-			  -moz-box-sizing: border-box;
-			  -webkit-box-sizing: border-box;
-			  box-sizing: border-box;
-			}
-			.ui-bar-a {
-			    background: linear-gradient(#3C3C3C, #111) repeat scroll 0 0 #111;
-			    border: 1px solid #333;
-			    color: #FFF;
-			    font-family: Helvetica,Arial,sans-serif;
-			    font-weight: 700;
-			    text-shadow: 0 -1px 0 #000;
-			}
-			header > h1 {
-				display: block;
-			    font-size: 1em; /* 16px / 16px */
-			    margin: 0.625em 30% 0.75em; /* 10/16, 30%, 12/16) */
-			    min-height: 1.1em;
-			    outline: 0 none !important;
-			    overflow: hidden;
-			    text-align: center;
-			    text-overflow: ellipsis;
-			    white-space: nowrap;    
-			}
-			h1 {
-				font-size: 1.25em; /* 20px / 16px */
-				font-weight: 700;
-    			margin-bottom: .375em; /* 6px / 16px */
-    			margin-top: .375em; /* 6px / 16px */
-			}			
-			img {  
-				max-width: 100%; 
-			}
-			ul {
-				margin: .5em 1em; /* 8/16 16/16 */
+		<style>	
+			img { 
+				float: left;
+				margin: 0 1em 1em 0;
 			}
 			.container {
 			    margin: auto;
 			    overflow: hidden;
-			    width: 95%;
-				padding: 1%; /* 10px/948*/
+			    padding: .625em 10px 1.5em;
 			}
-			.pic-container { 
-				text-align:center; 
+			figure {
+				clear: both;
+			}
+			footer {
+				clear: both;
+			}
+
+			@media (min-width: 36em) {
+				img { 
+					max-width: 100%;
+					margin: 0; 
+				}
+				footer > section {
+				    width: 33.333333%;
+				    float: left;
+				}
+				figcaption {
+					display: inline;
+				}
 			}
 		</style>
-		<script type="text/javascript" src="../libs/picturefill.js"></script>
+		<script async type="text/javascript" src="../libs/picturefill.js"></script>
 	</head>
 <body>
-	<header class="ui-bar-a">
-		<h1>Art direction</h1>
-	</header>
 	<div class="container">
-		<h1>Responsive images with <a href="https://github.com/scottjehl/picturefill" target="_blank">Picturefill</a></h1>
-        <p>In this demo we show you how to:</p>
+        <h3>Use case: art direction</h3>
         <ul>
-            <li>Use Picturefill to load a responsive image for the viewport</li>
-            <li>Load an HD (retina) image when support exists</li>
+            <li>This technique allows us to use smaller images that appear larger on smaller viewports by cropping the subject of the photo.</li>
         </ul>
-        <div class="pic-container">
-		    <picture>
-		    	<source srcset="images/extralarge.jpg" media="(min-width: 1000px)">
-		    	<source srcset="images/large.jpg, images/large@2x.jpg 2x" media="(min-width: 800px)">
-		        <source srcset="images/medium.jpg" media="(min-width: 440px)">
-		        <source srcset="images/art-direction.jpg">
-		        <img srcset="images/art-direction.jpg" alt="picture">  
-		    </picture>
-		</div>
+        <footer>
+        	<section>
+        		<figure>
+	        		<picture>
+					   	<source 
+					   		media="(min-width: 36em)"
+					      	srcset="images/large.jpg 1024w, images/medium.jpg 640w, images/small.jpg 320w"
+					      	sizes="33.3vw" />
+					   	<source 
+					   		srcset="images/cropped-large.jpg 2x, images/cropped-small.jpg 1x" />
+					   <img src="images/small.jpg" alt="pic" />
+					</picture>
+					<figcaption>Smaller images actually appear larger because we have cropped the subject.</figcaption>
+				</figure>
+        	</section>
+        	<section>
+        		<figure>
+	        		<picture>
+					   	<source 
+					   		media="(min-width: 36em)"
+					      	srcset="images/large.jpg 1024w, images/medium.jpg 640w, images/small.jpg 320w"
+					      	sizes="33.3vw" />
+					   	<source 
+					   		srcset="images/cropped-large.jpg 2x, images/cropped-small.jpg 1x" />
+					   <img src="images/small.jpg" alt="pic" />
+					</picture>
+					<figcaption>The cropped image is light-weight and sharp for all size viewports.</figcaption>
+				</figure>
+        	</section>
+        	<section>
+        		<figure>
+	        		<picture>
+					   	<source 
+					   		media="(min-width: 36em)"
+					      	srcset="images/large.jpg 1024w, images/medium.jpg 640w, images/small.jpg 320w"
+					      	sizes="33.3vw" />
+					   	<source 
+					   		srcset="images/cropped-large.jpg 2x, images/cropped-small.jpg 1x" />
+					   <img src="images/small.jpg" alt="pic" />
+					</picture>
+					<figcaption>We can still load a 2x cropped image when supported.</figcaption>
+				</figure>	
+        	</section>
+        </footer>
 	</div>
 </body>
 </html>
