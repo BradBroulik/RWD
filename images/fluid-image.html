@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<meta charset="utf-8">
+		<title>Picturefill</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			img {  
+				max-width: 100%; 
+			}
+			.pic-container { 
+				text-align:center; 
+			}
+		</style>
+		<script async type="text/javascript" src="../libs/picturefill.js"></script>
+	</head>
+<body>
+	<div>
+		<h3>Responsive images with <a href="https://github.com/scottjehl/picturefill" target="_blank">Picturefill</a></h3>
+        <p>Use case: fluid image</p>
+        <ul>
+            <li>Load an appropriate fluid image based on the devices supported screen density and viewport dimensions</li>
+        </ul>
+        <div class="pic-container">
+		    <img 
+			     srcset="images/wolves/rad-wolf-large.jpg 1024w, images/wolves/rad-wolf-medium.jpg 640w, images/wolves/rad-wolf-small.jpg 320w"
+			     sizes="100vw"
+			     src="images/wolves/rad-wolf-small.jpg"
+			     alt="wolf" />
+		</div>
+	</div>
+</body>
+</html>

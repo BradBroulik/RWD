@@ -1,0 +1,29 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<meta charset="utf-8">
+		<title>Picturefill</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			.pic-container { 
+				text-align:center; 
+			}
+		</style>
+		<script async type="text/javascript" src="../libs/picturefill.js"></script>
+	</head>
+<body>
+	<div>
+		<h3>Responsive images with <a href="https://github.com/scottjehl/picturefill" target="_blank">Picturefill</a></h3>
+        <p>Use case: device-pixel-ratio</p>
+        <ul>
+            <li>Load an appropriate fixed-width image based on the devices supported resolution (1x, 2x, etc.)</li>
+        </ul>
+        <div class="pic-container">
+		    <img 
+			     srcset="images/wolves/rad-wolf-small.jpg 1x, /wolves/rad-wolf-medium.jpg 2x"
+			     src="images/wolves/rad-wolf-small.jpg"
+			     alt="A rad wolf" />
+		</div>
+	</div>
+</body>
+</html>

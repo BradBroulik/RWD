@@ -1,0 +1,67 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<meta charset="utf-8">
+		<title>Picturefill</title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			img {  
+				max-width: 100%; 
+			}
+			.container {
+			    margin: auto;
+			    overflow: hidden;
+			    padding: .625em 10px 1.5em;
+			}
+			footer {
+				clear: both;
+			}
+
+			@media (min-width: 36em) {
+				footer > section {
+				    width: 33.333333%;
+				    float: left;
+				}
+			}
+		</style>
+		<script async type="text/javascript" src="../libs/picturefill.js"></script>
+	</head>
+<body>
+	<div class="container">
+		<h3>Responsive images with <a href="https://github.com/scottjehl/picturefill" target="_blank">Picturefill</a></h3>
+        <p>Use case: variable-sized image</p>
+        <ul>
+            <li>Load an appropriate variable-sized image based on the devices supported screen density and variable relative viewport dimensions</li>
+        </ul>
+        <footer>
+        	<section>
+        		<img src="images/wolves/rad-wolf-small.jpg"
+			     srcset="images/wolves/rad-wolf-large.jpg 1024w,
+			             images/wolves/rad-wolf-medium.jpg 640w,
+			             images/wolves/rad-wolf-small.jpg 320w"
+			     sizes="(min-width: 36em) 33.3vw,
+			            100vw"
+			     alt="A rad wolf" />
+        	</section>
+        	<section>
+        		<img src="images/wolves/rad-wolf-small.jpg"
+			     srcset="images/wolves/rad-wolf-large.jpg 1024w,
+			             images/wolves/rad-wolf-medium.jpg 640w,
+			             images/wolves/rad-wolf-small.jpg 320w"
+			     sizes="(min-width: 36em) 33.3vw,
+			            100vw"
+			     alt="A rad wolf" />
+        	</section>
+        	<section>
+        		<img src="images/wolves/rad-wolf-small.jpg"
+			     srcset="images/wolves/rad-wolf-large.jpg 1024w,
+			             images/wolves/rad-wolf-medium.jpg 640w,
+			             images/wolves/rad-wolf-small.jpg 320w"
+			     sizes="(min-width: 36em) 33.3vw,
+			            100vw"
+			     alt="A rad wolf" />
+        	</section>
+        </footer>
+	</div>
+</body>
+</html>
