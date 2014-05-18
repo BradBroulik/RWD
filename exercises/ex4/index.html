@@ -25,11 +25,18 @@
         <section class="s1">
             <h1>Block A</h1>
             <div class="pic-container">
-                <picture>
-                    <source srcset="../images/large.png" media="(min-width: 35em)">
-                    <source srcset="../images/small.png">
-                    <img srcset="../images/small.png" alt="Lincoln"> 
-                </picture>
+                <figure>
+                    <picture>
+                        <source 
+                            media="(min-width: 35em)"
+                            srcset="../images/medium.jpg 640w, ../images/small.jpg 320w"
+                            sizes="100vw">
+                        <source 
+                            srcset="../images/cropped-large.jpg 2x, ../images/cropped-small.jpg 1x" />
+                        <img src="../images/small.jpg" alt="Lincoln" />
+                    </picture>
+                    <figcaption>Abraham Lincoln was the 16th President of the United States, serving from March 1861 until his assassination in April 1865.</figcaption>
+                </figure>
             </div>
         </section>
         <footer>
