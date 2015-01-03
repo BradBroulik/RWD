@@ -1,6 +1,6 @@
 /* 
  * Run Gulp: gulp
- * Install npm dependencias: npm -install 
+ * Install npm dependencies: npm install 
  */
 var gulp = require('gulp'),
 	htmlhint = require("gulp-htmlhint"),
