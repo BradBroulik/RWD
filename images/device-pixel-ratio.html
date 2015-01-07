@@ -9,7 +9,7 @@
 				text-align: center;
 			}
 			img {
-				width: 300px;
+				width: 150px;
 			}
 		</style>
 		<script async type="text/javascript" src="../libs/picturefill.js"></script>
@@ -18,13 +18,13 @@
 	<div>
         <h3>Use case: device-pixel-ratio</h3>
         <ul>
-            <li>Load an appropriate fixed-width image based on the devices supported resolution (1x-small, 2x-medium, etc.)</li>
+            <li>Load an appropriate fixed-width image based on the devices supported resolution (circle@1x.png, circle@2x.png, etc.)</li>
         </ul>
         <div class="pic-container">
 		    <img 
-		    	 src="images/small.jpg"
-			     srcset="images/small.jpg 1x, images/medium.jpg 2x"
-			     alt="pic" />
+		    	 src="images/circle@1x.png"
+			     srcset="images/circle@1x.png 1x, images/circle@2x.png 2x, images/circle@3x.png 3x"
+			     alt="circle" />
 		</div>
 	</div>
 </body>
