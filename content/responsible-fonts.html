@@ -2,23 +2,25 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Responsive Fonts</title>
+    <title>Responsible Fonts</title>
     <meta name="viewport" content="initial-scale=1 width=device-width" />
     <style>
     html {
-        font: normal 100%/1.5rem Special Elite, Helvetica; /* font-size: ~16px, line-height: ~24px; */
+        /* sans-serif is our fallback font until the 'Droid Sans' custom font is loaded.  Prefer a similar fallback font to avoid a Flash Of Unstyled Text (FOUT). */
+        font: normal 100%/1.5rem 'Droid Sans', sans-serif; /* font-size: ~16px, line-height: ~24px; */
     }
-    @media (min-width: 600px) {
-       html { 
-          font-size: 120%; 
-        }
-    }
+
+    /* Progressively color the background so you can visibly see the loading events. */
+    body { background-color:rgba(0, 0, 0, 0.5);/*black*/ }
+    .wf-loading body { background-color:rgba(255, 255, 0, 0.5);/*yellow*/ }
+    .wf-active body { background-color:rgba(0, 153, 0, 0.5);/*green*/ }
+    .wf-inactive body { background-color:rgba(255, 0, 0, 0.5);/*red*/ }
 
     header {
         text-align: center;
-        font-family: Condiment;
     }
-    article {
+
+    article {  
          font-size: 1rem; /* 16px/16px */
          margin: 12px;
 
@@ -26,6 +28,7 @@
          -webkit-flex: 0 1 18.75rem; /* 300px/16px (target/context=result) */
           flex: 0 1 18.75rem;
     }
+
     .wrapper {
           display: -webkit-flex;  /* Safari */
           display: flex;          /* Firefox, Chrome, IE */
@@ -37,18 +40,32 @@
           justify-content: center;
     }
     </style>
-    <script type="text/javascript" src="../libs/eCSSential.min.js"></script>
-    <script>
-    /* eCSSential, by Scott Jehl (https://github.com/scottjehl/eCSSential), will only download the stylesheet if the media query could evaluate to true.  Demo from real device and inspect from Safari's Web Inspector */
-    eCSSential({
-        /*"all": "http://fonts.googleapis.com/css?family=Special+Elite",*/
-        "(min-width: 600px)": "http://fonts.googleapis.com/css?family=Special+Elite",
-        "(min-width: 860px)": "http://fonts.googleapis.com/css?family=Condiment"
-    });
-    </script>
+    <script type="text/javascript">
+      /* Asychronously download the Google Web Font Loader and load the Droid-Sans Google Font */
+      WebFontConfig = {
+        google: { families: [ 'Droid+Sans::latin' ] },
+        
+        /* Log the events so you can see their progress in the console  */
+        loading: function() { console.log('loading...'); },
+        active: function() { console.log('active...'); },
+        inactive: function() { console.log('inactive...'); },
+        fontloading: function(familyName, fvd) { console.log('fontloading...'+ familyName + " " + fvd); },
+        fontactive: function(familyName, fvd) { console.log('fontactive...'+ familyName + " " + fvd); },
+        fontinactive: function(familyName, fvd) { console.log('fontinactive...'+ familyName + " " + fvd); }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1.5.6/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })(); 
+      </script>
 </head>
 <body>
-  <header><h1>Responsive Fonts</h1></header>
+  <header><h1>Responsible Fonts</h1></header>
   <div class="wrapper">
     <article class="left">
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
