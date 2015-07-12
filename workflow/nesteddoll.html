@@ -52,6 +52,8 @@
 		$(document).on("pageinit", "#nested-doll-page", function() {
 			$( "#appendable" ).appendAround();
 
+			var myBreakpoint = '35em';
+
 			$("#nav-panel a").on("click", function(e) {
 				$( "#nav-panel" ).panel( "close" );
 			});
@@ -59,8 +61,9 @@
 			$("#appendable a").on("click", function(e) {
 				$.mobile.loading( 'show' );
 				var mailId = $( this ).jqmData( "mail-id" );
-
-				if (matchMedia('(min-width: 35em)').matches) { /* ~560px */
+				
+				if (matchMedia('(min-width: '+ myBreakpoint +')').matches) {
+				//if (matchMedia('(min-width: 35em)').matches) { /* ~560px */
 					$.ajax({
 					  	url: "includes/mail-detail"+mailId+".html",  
 					  	success: function( response ) {
