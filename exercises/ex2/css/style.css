@@ -23,13 +23,7 @@ body {
     width: 95%;
     padding: .625em 0 1.5em; /* 10px/16px, 0, 24px/16px */
 }
-footer > section {
-    width: 100%;
-    clear: both;
-}
-footer {
-    clear: both;
-}
+
 section {
     min-height: 200px;
     margin-bottom: 1em;
@@ -56,8 +50,6 @@ h1 {
     background: plum;
 }
 
-/* Unstack the layout when above 35em (prefer mobile first media queries) */
-@media (min-width: 35em) {
     footer > section {
         width: 49.1561181%; /* 466px / 948px */
         margin-right: 1.6877637%; /* 16px / 948px */
@@ -66,5 +58,15 @@ h1 {
     }
     footer > section:last-child {
         margin-right: 0;
-    }    
+    }
+
+/* Unstack the layout when above 35em (prefer mobile first media queries) */
+@media (max-width: 35em) {
+    footer > section {
+        width: 100%;
+        clear: both;
+    }
+    footer {
+        clear: both;
+    }
 }
